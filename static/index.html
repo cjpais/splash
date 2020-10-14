@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CJ Pais 👋🏼</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <h1>CJ Pais</h1>
+    <img id="randimg" src="me.jpeg" class="circle"/>
+    <!--<div id="randimg" class="circle"/></div>-->
+
+    <h1>
+      ❤️
+      🧗🏽‍♂️
+      🚴🏽‍♂️
+      🏊🏼‍♂️
+      🏃🏽
+      🤿
+      🏔
+      🌊
+      📖
+      🧑🏽‍💻
+    </h1>
+
+    <h3>
+      <a href="https://stream.cjpais.com">Stream</a>
+      • 
+      <a href="https://daily.cjpais.com">Daily Log</a>
+      • 
+      <a href="https://burrito.place">Financials</a>
+    </h3>
+
+    <h5>
+      <a href="https://twitter.com/cj_pais">Twitter</a>
+      • 
+      <a href="mailto:cj@cjpais.com">Email</a>
+      • 
+      <a href="tel:916-622-6023">Phone</a>
+    </h5>
+
+  </div>
+
+  <script>
+    function randInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive 
+    }
+
+    function setImage(timeout) {
+      let index = randInclusive(0, 40)
+
+      img = document.getElementById("randimg")
+      src = "me/me_" + index + ".jpg"
+      img.src = src
+
+      timeout = Math.max(timeout/2, 750)
+      setTimeout(function () { setImage(timeout) }, timeout)
+    }
+
+    setTimeout(function() { setImage(60000) }, 60000)
+
+  </script>
+
+</body>
+
+</html>

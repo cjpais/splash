@@ -1,0 +1,40 @@
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.container > * {
+  padding: .5em;
+}
+
+
+.circle {
+  width: 400px;
+  height: 400px;
+  /*object-fit: cover;*/
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+} 
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #222;
+  }
+
+  body a {
+    color: #eee;
+  }
+}
